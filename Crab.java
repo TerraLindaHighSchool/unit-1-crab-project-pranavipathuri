@@ -7,7 +7,30 @@ public class Crab extends Actor
 {
     public void act()
     {
-        // Add your action code here
+        // Moves the Crab
+        move(3);
+        turnAtEdge();
+        checkKeyPress();
+        onCollision();
+        // Turns the Crab at the edge
+    }
+    
+    private void turnAtEdge()
+    {
+      if(isAtEdge())  
+      {
+          turn(50);
+      }
+    }
+    //Checks the user key presses so user can turn the Crab
+    private void checkKeyPress()
+    {
+        
+    }
+    // Checks for collisions with other objects
+    private void onCollision()
+    {
+        
     }
 }
 
