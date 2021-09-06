@@ -25,12 +25,28 @@ public class Crab extends Actor
     //Checks the user key presses so user can turn the Crab
     private void checkKeyPress()
     {
-        
-    }
+        if(Greenfoot.isKeyDown("right"))
+        {
+            turn(4);
+        }
+        if(Greenfoot.isKeyDown("left"))
+        {
+            turn(-4);
+        }
+        if(Greenfoot.isKeyDown("up"))
+        {
+            Greenfoot.delay(60);
+        }
     // Checks for collisions with other objects
+    }
     private void onCollision()
     {
+        if(isTouching(Worm.class))
+        {
+            removeTouching(Worm.class);
         
+            Greenfoot.playSound("slurp.wav");
+        }
     }
 }
 
