@@ -25,17 +25,41 @@ public class Crab extends Actor
     //Checks the user key presses so user can turn the Crab
     private void checkKeyPress()
     {
-        if(Greenfoot.isKeyDown("right"))
+        if(Greenfoot.isKeyDown("up"))
         {
             turn(4);
         }
-        if(Greenfoot.isKeyDown("left"))
+        if(Greenfoot.isKeyDown("down"))
         {
             turn(-4);
         }
-        if(Greenfoot.isKeyDown("up"))
+        if(Greenfoot.isKeyDown("space"))
         {
             Greenfoot.delay(60);
+        }
+        
+        if(Greenfoot.isKeyDown("d"))
+        {
+            setRotation(0);
+            move(2);
+        }
+        
+        if(Greenfoot.isKeyDown("a"))
+        {
+            setRotation(180);
+            move(2);
+        }
+        
+        if(Greenfoot.isKeyDown("w"))
+        {
+            setRotation(270);
+            move(2);
+        }
+        
+        if(Greenfoot.isKeyDown("s"))
+        {
+            setRotation(90);
+            move(2);
         }
     // Checks for collisions with other objects
     }
@@ -60,6 +84,7 @@ public class Crab extends Actor
         {
             Greenfoot.playSound("au.wav");
             Greenfoot.stop();
+            Greenfoot.setWorld(new LoseSplash());
         }
     }
 }
