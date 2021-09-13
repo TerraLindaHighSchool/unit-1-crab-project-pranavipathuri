@@ -2,6 +2,8 @@ import greenfoot.*;  // (Actor, World, Greenfoot, GreenfootImage)
 
 public class CrabWorld extends World
 {
+    GreenfootSound background = new GreenfootSound("gh.mp3");
+    
     /**
      * Create the crab world (the beach). Our world has a size 
      * of 560x560 cells, where every cell is just 1 pixel.
@@ -9,6 +11,7 @@ public class CrabWorld extends World
     public CrabWorld() 
     {
         super(560, 560, 1);
+        background.playLoop();
         prepare();
     }
     
