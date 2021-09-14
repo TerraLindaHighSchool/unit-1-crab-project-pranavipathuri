@@ -23,4 +23,4 @@ public class Lobster extends Actor
           turn(50);
       }
     }
-    }
+}
